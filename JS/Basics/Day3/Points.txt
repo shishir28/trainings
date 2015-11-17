@@ -1,0 +1,37 @@
+
+Key Ideas
+	
+	Lambda 
+	Linkage through global variables
+
+Array 
+    *Create Array, Literal
+    *Reading and setting values
+    *Iterating values 
+    *Delete elements
+    *length
+    *Methods 
+        join
+        reverse
+        sort
+        concat
+        slice 
+        splice
+        push
+        pop
+        unshift, shift
+        toString(), toLocaleString()
+    * Array Vs Objects 
+
+Functions 
+    
+    
+    
+        
+
+
+
+
+
+
+

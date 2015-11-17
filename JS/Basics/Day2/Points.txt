@@ -3,12 +3,12 @@ Key Ideas
 	--Load and Go Delivery
 	--Losse Typing
 	--Objects and general Containers
-	Prototypal Inheritance 
+	--Prototypal Inheritance 
 	Lambda 
 	Linkage through global variables
 
 --Scope 
-	Function vs Global
+	--Function vs Global
 
 --Statements 	
     Expressions
@@ -28,7 +28,7 @@ Key Ideas
 --Object : 
    -- Any value in JavaScript that is not a string, a number, true , false , null , or undefined is an object.
    -- Object contain data and methods 
-    Object can inherit from other objects
+    --Object can inherit from other objects
 
     Creating
         --Object Literals 
