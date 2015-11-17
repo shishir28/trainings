@@ -1,0 +1,61 @@
+       
+Key Ideas
+	--Load and Go Delivery
+	--Losse Typing
+	--Objects and general Containers
+	Prototypal Inheritance 
+	Lambda 
+	Linkage through global variables
+
+--Scope 
+	Function vs Global
+
+--Statements 	
+    Expressions
+    --if 
+    --switch
+    --Loop
+        --while
+        --for
+        --do
+     --Jumps
+        break (The break statement, used alone, causes the innermost enclosing loop or switch statement to exit immediately)
+        -- continue (has labeled version)
+        -- return (has labeled version)
+         --try/throw  
+        -- X-Labeled-X
+
+--Object : 
+   -- Any value in JavaScript that is not a string, a number, true , false , null , or undefined is an object.
+   -- Object contain data and methods 
+    Object can inherit from other objects
+
+    Creating
+        --Object Literals 
+        Creating Objects with new
+        Prototype
+            Object.Prototype
+            new Object()inherits from Object.prototype
+            new Array()inherits from Array.prototype 
+            new Date() inherits Date.prototype
+        Object.create() // ES 5
+   
+  -- Object Literals
+     --   Wrapped in {}
+      --  : seprates names from values 
+       -- , seperated pairs
+    
+    Properties
+
+--Dynamic Objects 
+	--Unification of obejcts and Hashtable
+	--new Object() produces an empty container of name/value pairs 
+	--A name can be any string, a value can be any value except undefined 
+	members can accessed with dot notation or subscript notation
+
+
+
+
+
+
+

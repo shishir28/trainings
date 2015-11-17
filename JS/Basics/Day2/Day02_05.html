@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object - Properties</title>
+    <script type="text/javascript">
+        //        var book = {
+        //            "name": "My Experiment with truth",
+        //            author: {
+        //                firstname: "Mahatama",
+        //                surname: "Gandhi"
+        //            }
+        //        };
+
+        // --------1.  Querying and Setting Properties
+        //        var bookName = book.name; //
+        //
+        //        alert(bookName);
+        //        var author = book.author;
+        //        var name = author.surname // Get the "surname" property of the author.
+        //        alert(name);
+        //
+        //        var author1 = book["author"] // still getter but used it as hash
+        //        alert(author1.firstname);
+        //
+        //        book.edition = 6;
+        //        alert(book.edition);
+        //
+        // --------2.  Deleting Properties
+        //        delete book.edition;
+        //        alert(book.edition);
+        //
+        //        book.edition = 7;
+        //        alert(book.edition);
+        //        delete(book['edition']);
+        //        alert(book.edition);
+
+        // --------3.Testing Properties
+
+        //        var o = {
+        //            x: 1
+        //        }
+        //        alert(o.hasOwnProperty("x")); // true: o has an own property x
+        //        alert(o.hasOwnProperty("y")); // false: o doesn't have a property y
+        //        alert(o.hasOwnProperty("toString")); // false: toString is an inherited property
+
+
+        //        var o = Object.create({
+        //            y: 2
+        //        });
+        //        o.x = 1;
+        //        alert(o.propertyIsEnumerable("x")); // true: o has an own enumerable property x
+        //        alert(o.propertyIsEnumerable("y")); // false: y is inherited, not own
+
+        // --------4.Enumerating Properties
+
+        //        var o = {
+        //            x: 1,
+        //            y: 2,
+        //            z: 3
+        //        };
+        //        alert(o.propertyIsEnumerable("toString"));
+        //        for (p in o)
+        //            alert(p);
+
+        /// --------5. Accessor
+        var p = {
+            //x and y are regular read-write data properties.
+            alpha: 3.0,
+            beta: 4.0,
+
+            // c is a read-write accessor property with getter and setter.
+            // Don't forget to put a comma after accessor methods.
+            get c() {
+                return Math.sqrt(this.alpha * this.alpha + this.beta * this.beta);
+            },
+            set c(newvalue) {
+                var oldvalue = Math.sqrt(this.alpha * this.alpha + this.beta * this.beta);
+                var ratio = newvalue / oldvalue;
+                this.alpha *= ratio;
+                this.beta *= ratio;
+            },
+            // theta is a read-only accessor property with getter only.
+            get theta() {
+                return Math.atan2(this.beta, this.alpha);
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Object - Properties</h1>
+</body>
+
+</html>

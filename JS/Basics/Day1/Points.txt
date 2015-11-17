@@ -1,0 +1,140 @@
+History 
+	1992 : oak, Gosling
+	1995 :Hot Java , Livescript 
+	1996 : MS and JSCript 
+	1998 : ECMA Script 
+	
+  	It is real language 
+  	Small but Sophisticated 
+  	It is not subset of Java
+	Belongs to C family language
+	Functional language 
+
+	Any of these types can be stored in a variable, or a passed as parameters to any functions 
+	The language is not untyped 
+       
+Key Ideas
+	Load and Go Delivery
+	Losse Typing
+	Objects and general Containers
+	Prototypal Inheritance 
+	Lambda 
+	Linkage through global variables
+
+Values 
+	Numbers
+	Strings
+	Boolean
+	Objects
+	null
+	undefined
+Number
+	Only one number type 
+NaN
+	Special number: Not a number
+	Result of undefined or erroneous operations 
+	Any arithmetic operation with NaN as input will have NaN as result
+	NaN is not equal to anything including NaN
+
+Number Function
+       Number(value)
+       Converts the value into a number
+       it produces NaN if it has a problem
+Math
+it contains 
+	abs 
+	floor 
+	log
+	max
+	pow 
+	random
+	round 
+	sin
+	sqrt
+		
+Strings 
+	Sequence of 0 or more 16 bit characters 
+	No seperate character type
+	Strings are immutable 
+	String literal can use single or double quotes
+	length: determines the number of 16 bit characters 
+String Methods
+	charAt
+	concat
+	indexOf
+	lastIndexOf
+	match
+	replace
+	search
+	splice 
+	split
+	substring
+	toLowerCase
+	toUpperCase
+Boolean function
+	Boolean(value)
+	returns true if value is truthy
+	returns false if value is falsy
+Falsy Values 
+	false
+	null
+	undefined
+	""
+	0
+	NaN
+Truthy value 
+	Anything which is not Falsy
+
+Evertyhting else is Objects
+
+Dynamic Objects 
+	Unification of obejcts and Hashtable
+	new Object() produces an empty container of name/value pairs 
+	A name can be any string, a value can be any value except undefined 
+	members can accessed with dot notation or subscript notation
+
+Identifiers 
+	Starts with letter or _ or $ 
+	Followed by zero or more letters, digits , _ or $
+	By convention, all variables, parameters, members and function names start with lower case
+	Constructor with upper case
+	$ should be reserved for machines 
+
+Reserved Words 
+	abstract
+	boolean
+        GET a screen shots 
+
+Operators 
+	Arithmetic
+		+ - * / %
+	Comparison
+		== != < > <=  >=  
+	Logical 
+		&& ||  ! 
+        Bitwise 
+		& | ^ >> >>> <<
+	Ternary 
+		?:
+
++ 
+	Addition and concatenation
+	If both operands and numbers ,
+	  then 
+		add then
+	  else 
+		converts both to strings and concatenate them
+
+	Unary operator can convert strings to number +"42" = 42
+	
+== != 
+
+		Equal and not Equal 
+	These operators can do type coercion
+	it is better to use === and !== which do not do type coercion
+
+
+
+
+
+

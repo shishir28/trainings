@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object - Prototype and Inheritance</title>
+    <script type="text/javascript">
+        var o = {
+            x: 1
+        }; // o ---> Object.prototype ---> null
+        console.log(o.prototype);
+        var p = Object.create(o); //p inherits properties from o and Object.prototype
+        p.y = 2; // and has an own property y.
+        var q = Object.create(p); //q inherits properties from p, o, and Object.prototype and has an own property z.
+        q.z = 3;
+        var s = p.toString(); // toString is inherited from Object.prototype
+        alert(q.x + q.y); // => 3: x and y are inherited from o and p
+
+        var a = ["CSK", "MI", "KKR"]; //// a ---> Array.prototype ---> Object.prototype ---> null
+
+        function f() {
+            return 2;
+        } // f ---> Function.prototype ---> Object.prototype ---> null
+
+        function createObject(o) {
+            function F() {}
+            F.prototype = o;
+            return new F();
+        }
+        Object.prototype.double = function (x) {
+            return x * 2;
+        };
+        // Some prototyping 
+        var obj = Object.create(Object.prototype);
+        //alert(obj.toString());
+        alert(obj.double(10));
+        var obj1 = new Object();
+        alert(obj1.double(15));
+        var obj2 = {};
+        alert(obj2.double(25));
+        obj2.double = function (x) {
+            return (x * 2 - 1);
+        }
+        alert(obj2.double(25));
+        var obj3 = Object.create(obj2);
+        alert(obj3.double(30));
+
+        // methods are also property
+
+        //        var obj = {
+        //            a: 2,
+        //            m : function(){    
+        //            return this.a + 1;
+        //        }
+        //        };
+        //
+        //        console.log(obj.m()); // 3
+        //        // When call ing o.m in this case, 'this' refers to o
+        //
+        //        var p = Object.create(obj);
+        //        // p is an object that inherits from o
+        //
+        //        p.a = 12; r
+        //        console.log(p.m()); // 13
+    </script>
+</head>
+
+<body>
+    <h1>Object - Prototype and Inheritance</h1>
+</body>
+
+</html>
