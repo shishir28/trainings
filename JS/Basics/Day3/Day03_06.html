@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions - As Namespace</title>
+    <script type="text/javascript">
+        var xyz = (function () {
+            var module = {
+                getForms: getForms,
+                getForm: getForm
+            };
+            return module;
+
+            function getForms() {
+                return [{
+                    formName: 'Patient'
+                        }, {
+                    formName: 'Medications'
+                        }, {
+                    formName: 'LabResults'
+                        }];
+            }
+
+            function getForm() {
+                return {
+                    formName: 'Patient'
+                };
+            }
+        })();
+
+        console.log(xyz.getForm());
+        console.log('*********************************');
+        xyz.getForms().forEach(function (form) {
+            console.log(form);
+            console.log('----------------------------------');
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Functions - As Namespace</h1>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions - Closures</title>
+    <script type="text/javascript">
+        //        1. First Example 
+        //        var scope = "global scope";
+        //
+        //        function checkscope() {
+        //            var scope = "local scope-1";
+        //
+        //            function f() {
+        //                return scope;
+        //            }
+        //            return f();
+        //        }
+        //        var check1 = checkscope();
+        //        console.log(check1);
+
+        //        2. Second Example
+
+        //        var scope = "global scope";
+        //
+        //        function checkscope() {
+        //            var scope = "local scope-2";
+        //
+        //            function f() {
+        //                return scope;
+        //            }
+        //            return f;
+        //        }
+        //        var check2 = checkscope();
+        //
+        //        console.log(check2());
+
+        //        3 Third Example
+        var uniqueIdentifier = (function () {
+            // Define and invoke
+            var counter = 0; // Private state of function below
+            return function () {
+                return counter++;
+            };
+        }());
+        console.log('Currrent value is ' + uniqueIdentifier());
+        console.log('Next currrent value is ' + uniqueIdentifier());
+    </script>
+</head>
+
+<body>
+    <h1>Functions - Closures</h1>
+</body>
+
+</html>

@@ -24,6 +24,18 @@ Array
     * Array Vs Objects 
 
 Functions 
+    * Defining Functions
+    * Invoking Functions
+        functions
+        methods
+        constructors ,
+        indirect call and apply
+    * Optional paramters
+    * Variable length argument list(varargs functions). 
+        Caller and calleeon 
+    * Function as values
+    * Function as Namespace
+    * Closures - functions are executed using the scope chain that was in effect when they were defined. This is called lexical scoping
     
     
     

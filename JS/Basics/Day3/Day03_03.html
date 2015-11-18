@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions - Definitions, Invocations</title>
+    <script type="text/javascript">
+        // Expressions
+        var double = function (x) {
+            return x * 2;
+        };
+
+        // Statements
+
+        function distance(x1, y1, x2, y2) {
+            var dx = x2 - x1;
+            var dy = y2 - y1;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        // Function - Invocation
+        console.log(double(5));
+
+        // Method - Invocation
+        var obj = {
+            a: 2,
+            m: function () {
+                return this.a + 1;
+            }
+        };
+
+        console.log(obj.m());
+        console.log(obj["m"]()); // access as key
+
+        // Constructor - Invocation
+        var o = new Object();
+        console.log(o);
+
+        // Indirect Invocation
+    </script>
+</head>
+
+<body>
+    <h1>Functions - Definitions, Invocations</h1>
+</body>
+
+</html>

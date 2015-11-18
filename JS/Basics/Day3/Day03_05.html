@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions - As Values</title>
+    <script type="text/javascript">
+        //        1. Example 
+        function double(x) {
+            return 2 * x;
+        }
+        var dbl = double;
+        console.log(dbl(10));
+
+        var arr = [];
+        arr[0] = function (x) {
+            return x * x;
+        };
+        console.log(arr[0](4));
+
+        //        2. Example : curry 
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        function subtract(x, y) {
+            return x - y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        function divide(x, y) {
+            return x / y;
+        }
+        // Here's a function that takes one of the above functions
+        // as an argument and invokes it on two operands
+        function operate(operator, operand1, operand2) {
+            return operator(operand1, operand2);
+        }
+        var resultValue = operate(multiply, operate(add, 4, 5), operate(multiply, 1, 3));
+        console.log(resultValue);
+
+        //        3. Example : Function as object
+        uniqueIdentifier.currentValue = 1;
+
+        function uniqueIdentifier() {
+            return uniqueIdentifier.currentValue++;
+        }
+        console.log('Currrent value is ' + uniqueIdentifier());
+        console.log('Next currrent value is ' + uniqueIdentifier());
+    </script>
+</head>
+
+
+<body>
+    <h1>Functions - As Values</h1>
+</body>
+
+</html>
