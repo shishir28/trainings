@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patterns-Module</title>
+    <script type="text/javascript">
+        var MYAPP = MYAPP || {};
+
+        MYAPP.namespace = function (ns_string) {
+            var parts = ns_string.split('.'),
+                parent = MYAPP,
+                i;
+            // strip redundant leading global
+            if (parts[0] === "MYAPP") {
+                parts = parts.slice(1);
+            }
+            for (i = 0; i < parts.length; i += 1) {
+                // create a property if it doesn't exist
+                if (typeof parent[parts[i]] === "undefined") {
+                    parent[parts[i]] = {};
+                }
+                parent = parent[parts[i]];
+            }
+            return parent;
+        };
+        //        //        1. Revealing Module Pattern
+        //        MYAPP.namespace('MYAPP.utilities.Array');
+        //        MYAPP.utilities.array = (function () {
+        //
+        //            // private properties
+        //            array_string = "[object Array]",
+        //                ops = Object.prototype.toString;
+        //
+        //            return {
+        //                inArray: function (needle, haystack) {
+        //                    for (var i = 0, max = haystack.length; i < max; i += 1) {
+        //                        if (haystack[i] === needle) {
+        //                            return true;
+        //                        }
+        //                    }
+        //                },
+        //                isArray: function (a) {
+        //                    return ops.call(a) === array_string;
+        //                }
+        //            };
+        //        }());
+
+        //        2. Importing global module
+        MYAPP.utilities.module = (function (app, global) {
+            // references to the global object
+            // and to the global app namespace object
+            // are now localized
+        }(MYAPP, this));
+    </script>
+</head>
+
+<body>
+    <h1>Patterns--Module</h1>
+</body>
+
+</html>

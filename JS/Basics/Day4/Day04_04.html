@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patterns-Chaining</title>
+    <script type="text/javascript">
+        var obj = {
+            value: 1,
+            increment: function () {
+                this.value += 1;
+                return this;
+            },
+            add: function (v) {
+                this.value += v;
+                return this;
+            },
+            print: function () {
+                alert(this.value);
+            }
+        };
+
+        // old way
+        //        obj.increment();
+        //        obj.add(6); // 8
+        //        obj.print();
+        //chaining
+        obj.increment().add(6).print(); // 8
+    </script>
+</head>
+
+<body>
+    <h1>Patterns--Chaining</h1>
+</body>
+
+</html>

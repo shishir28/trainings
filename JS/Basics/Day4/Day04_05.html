@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patterns-Singleton</title>
+    <script type="text/javascript">
+        //        1. Lierals: Singleton is not possible
+        //        var myPlace = {
+        //            location: 'Bangalore'
+        //        };
+        //
+        //        var myAnotherPlace = {
+        //            location: 'Bangalore'
+        //        };
+        //        alert(myAnotherPlace == myPlace);
+        //        alert(myAnotherPlace === myPlace);
+
+        //        2 . Instance in a Closure
+
+        function CacheProvider() {
+            // the cached instance 
+            var instance = this;
+            // proceed as normal 
+            this.id = 0;
+            this.appName = "Test";
+            // rewrite the constructor 
+            CacheProvider = function () {
+                return instance;
+            }; // 
+        }
+        // // // testing // 
+        var c1 = new CacheProvider();
+        var c2 = new CacheProvider();
+        console.log(c1 === c2); // true
+    </script>
+</head>
+
+<body>
+    <h1>Patterns-Singleton</h1>
+</body>
+
+</html>

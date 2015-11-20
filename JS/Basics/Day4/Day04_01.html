@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patterns-Namespace</title>
+    <script type="text/javascript">
+        //        1. NAMESPACE
+        //        var MYAPP = MYAPP || {}; // 
+        //        MYAPP.Parent = function () {};
+        //        MYAPP.Child = function () {};
+        //        // a variable
+        //        MYAPP.some_var = 1;
+        //        // an object container
+        //        MYAPP.modules = {};
+
+        //        2. Custom Namespace function
+
+        //        var MYAPP = MYAPP || {};
+        //
+        //        MYAPP.namespace = function (ns_string) {
+        //            var parts = ns_string.split('.'),
+        //                parent = MYAPP,
+        //                i;
+        //            // strip redundant leading global
+        //            if (parts[0] === "MYAPP") {
+        //                parts = parts.slice(1);
+        //            }
+        //            for (i = 0; i < parts.length; i += 1) {
+        //                // create a property if it doesn't exist
+        //                if (typeof parent[parts[i]] === "undefined") {
+        //                    parent[parts[i]] = {};
+        //                }
+        //                parent = parent[parts[i]];
+        //            }
+        //            return parent;
+        //        };
+        //        var day4Module = MYAPP.namespace('MYAPP.training.day4');
+        //        console.log(MYAPP);
+        //        day4Module.sayHi = function () {
+        //            return "Hi!";
+        //        };
+        //        //        console.log(day4Module === MYAPP.training.day4);
+        //        console.log(day4Module.sayHi());
+
+        //        3. Declaring Dependencies -- Just sample code 
+
+        /*
+        var myFunction = function () {
+            // dependencies
+            var event = MYCOMPANY.util.Event,
+                dom = MYCOMPANY.util.Dom;
+            // do other works
+        };
+
+        */
+    </script>
+</head>
+
+<body>
+    <h1>Patterns-Namespace</h1>
+</body>
+
+</html>

@@ -5,12 +5,12 @@ Key Ideas
 	Linkage through global variables
 
 Array 
-    *Create Array, Literal
-    *Reading and setting values
-    *Iterating values 
-    *Delete elements
-    *length
-    *Methods 
+    Create Array, Literal
+    Reading and setting values
+    Iterating values 
+    Delete elements
+    length
+    Methods 
         join
         reverse
         sort
@@ -21,21 +21,21 @@ Array
         pop
         unshift, shift
         toString(), toLocaleString()
-    * Array Vs Objects 
+     Array Vs Objects 
 
 Functions 
-    * Defining Functions
-    * Invoking Functions
+     Defining Functions
+     Invoking Functions
         functions
         methods
         constructors ,
         indirect call and apply
-    * Optional paramters
-    * Variable length argument list(varargs functions). 
+     Optional paramters
+     Variable length argument list(varargs functions). 
         Caller and calleeon 
-    * Function as values
-    * Function as Namespace
-    * Closures - functions are executed using the scope chain that was in effect when they were defined. This is called lexical scoping
+     Function as values
+     Function as Namespace
+     Closures - functions are executed using the scope chain that was in effect when they were defined. This is called lexical scoping
     
     
     

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patterns-Object and Privacy</title>
+    <script type="text/javascript">
+        //        1. Object Literals and Privacy
+        var obj = (function () {
+            // private members
+            var name = "Infinite Computer Solutions";
+            return {
+                getName: function () {
+                    return name;
+                }
+            };
+        }());
+        console.log(obj.getName()); // "Infinite Computer Solutions"
+    </script>
+</head>
+
+<body>
+    <h1>Patterns-Object and Privacy</h1>
+</body>
+
+</html>

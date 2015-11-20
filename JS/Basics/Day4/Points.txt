@@ -1,0 +1,8 @@
+
+
+Practices 
+    Bad Parts
+    Good Parts
+Patterns
+    Module
+    Chaining -- heavinly used in jQuery library
