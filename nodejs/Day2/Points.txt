@@ -1,0 +1,74 @@
+       
+Key Ideas
+	1.Based on commonJS 
+         use of require function
+         module name is string and may contain forward slash
+         the module must explicitly expose what it want to
+         variables are private to the module
+         
+    2.Loading a module with require and default paths
+        example 1: var http = require('http');
+        example 2:  var spawn = require('child_process').spawn;
+        acceptable extensions : .js, .node, .json
+        Node core module has higher priority than external if name conflicts
+        
+        require.resolve , require.cache
+        
+    3.External Modules and node package manager
+         npm registry : http://search.npmjs.org/
+         to install module : $ npm install modulename 
+                                example (connect)
+                                    
+         to  install globally : $ npm -g install modulename 
+         
+         to uninstall $npm uninstall modulename
+         
+         to perform an update if any are found 
+            npm update
+            npm update modulename
+         to check if any package is outdated 
+            npm outdated
+         to list installed package : 
+            npm ls , la, ll
+            npm ls -g
+            
+          to install from  github
+            npm install github url
+            
+          to search 
+            npm search module name
+        example colors module 
+            console.log('This is awesome!'.rainbow.underline);
+            console.log('we love zebras'.zebra.bold);
+     
+    4.Creating your own custom module
+      
+       Packing an entire directory 
+          package.json
+            { "name" : "mylibrary",
+                "main" : "./mymodule/mylibrary.js" }
+         or index.js   
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
