@@ -1,0 +1,7 @@
+       
+Key Ideas
+	1. Promise
+    2. Sequential Functionality, Nested Callbacks, and Exception Handling  
+    3. Asynchronous Patterns and Control Flow Modules   
+    4. Create a sample express based web site
+    

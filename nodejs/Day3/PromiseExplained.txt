@@ -1,0 +1,82 @@
+Sample source is from  http://www.html5rocks.com/en/tutorials/es6/promises/ 
+
+A promise can be:
+
+    1. fulfilled: The action relating to the promise succeeded
+    2. rejected: The action relating to the promise failed
+    3. pending: Hasn't fulfilled or rejected yet
+    4. settled: Has fulfilled or rejected 
+    
+//--------------------------------- snippet 1 --------------------------------- 
+    var img1 = document.querySelector('.img-1');
+
+    img1.addEventListener('load', function() {
+      // image loaded
+    });
+
+    img1.addEventListener('error', function() {
+      // something went wrong
+    });
+    
+//--------------------------------- snippet 2 --------------------------------- 
+    var img1 = document.querySelector('.img-1');
+
+    function loaded() {
+      //image loaded
+    }
+
+    if (img1.complete) {
+      loaded();
+    }
+    else {
+      img1.addEventListener('load', loaded);
+    }
+
+    img1.addEventListener('error', function() {
+      // something went wrong
+    });
+    
+//--------------------------------- snippet 3 ---------------------------------     
+
+    img1.callThisIfLoadedOrWhenLoaded(function() {
+      // loaded
+    }).orIfFailedCallThis(function() {
+      // failed
+    });
+
+    // and…
+    whenAllTheseHaveLoaded([img1, img2]).callThis(function() {
+      // all loaded
+    }).orIfSomeFailedCallThis(function() {
+      // one or more failed
+    });
+    
+    //--------------------------------- snippet 4 ---------------------------------     
+    
+    img1.ready().then(function() {
+      // loaded
+    }, function() {
+      // failed
+    });
+
+    // and…
+    Promise.all([img1.ready(), img2.ready()]).then(function() {
+      // all loaded
+    }, function() {
+      // one or more failed
+    });
+    
+    //--------------------------------- snippet 5 (Approach in previous version of nodejs ) ---------------------------------     
+
+    
+    var File = require('file');
+    var promise = File.read('mydata.txt');
+    promise.addCallback(function (data) {
+    // process data
+    });
+    promise.addErrback(function (err) {
+    // deal with error
+    })
+    
+    
+    
